@@ -1,0 +1,60 @@
+---
+import ios from '../images/icons/ios.svg';
+import play from '../images/icons/play.svg';
+import rub from '../images/icons/rub.svg';
+import phone from '../images/phone.webp';
+import map from '../images/map.jpeg';
+---
+
+<div class="container">
+  <div class="hero">
+    <div class="hero__content">
+      <h2 class="hero__content-title">
+        Арендуй пауэрбанк по цене кофе.<br /> В нужное время в нужном месте
+      </h2>
+      <div class="hero__content-btn">
+        <a class="btn-install">Установить приложение</a>
+        <a class="btn-ios">
+          <img src={ios} alt="ios-img" />
+        </a>
+        <a class="btn-android">
+          <img src={play} alt="android-img" />
+        </a>
+      </div>
+    </div>
+    <div class="hero__info">
+      <div class="hero__info-text">
+        Не переживай, если батарея на исходе.
+        <p>
+          Возьми пауэрбанк напрокат, пока совершаешь покупки или находишься на деловой встрече —
+          вокруг тысячи станций.
+        </p>
+      </div>
+      <div class="hero__info-aside">
+        <img class="hero__info-phone" src={phone} alt="phone-img" />
+        <img class="hero__info-map" src={map} alt="map-img" />
+      </div>
+    </div>
+    <div class="price">
+      <div class="price__left">
+        <img src={rub} alt="rub-icon" class="price__left-img" />
+        <h2 class="price__left-title">100 ₽ / 24 часа</h2>
+        <p class="price__left-text">
+          Тарифы в разных локациях отличаются — смотри актуальные цены в приложении.
+        </p>
+      </div>
+      <div class="price__right">
+        <h2 class="price__right-title">Установи приложение и арендуй пауэрбанк</h2>
+        <div class="price__right-btn">
+          <a class="btn-install">Установить приложение</a>
+          <a class="btn-ios">
+            <img src={ios} alt="ios-img" />
+          </a>
+          <a class="btn-android">
+            <img src={play} alt="android-img" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

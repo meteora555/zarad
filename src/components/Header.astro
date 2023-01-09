@@ -1,0 +1,37 @@
+---
+import logo from '../images/logo.svg';
+import contact from '../images/icons/ok.svg';
+---
+
+<header>
+  <div class="container">
+    <div class="header">
+      <div class="header__logo">
+        <a class="header__logo-link" href="">
+          <img class="header__logo-img" src={logo} alt="logo-img" />
+          <p class="header__logo-text">пауэрбанк станции</p>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__items">
+          <a href="#" class="nav__link">
+            <li class="nav__item">Для бизнеса</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li class="nav__item">Тарифы</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li class="nav__item">О нас</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li class="nav__item">Карта станций</li>
+          </a>
+        </ul>
+        <div class="nav__contacts">
+          <div class="nav__contacts-text">Контакты и поддержка</div>
+          <img src={contact} alt="contacts-img" class="nav__contacts-img" />
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
