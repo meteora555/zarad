@@ -3,19 +3,15 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 30px 0px;
 }
 
 //header
 
 .header {
   @include fluid(padding, 15px, 10px);
-  padding: 15px;
   display: flex;
-  justify-content: center;
-  position: sticky;
+  justify-content: space-between;
   &__logo {
-    margin-right: 60px;
     display: flex;
     transition: 0.2s linear;
     &:hover {
@@ -23,15 +19,23 @@
       background-color: rgb(211, 208, 208);
       border-radius: 10px;
     }
+    &-img {
+      width: 10%;
+    }
+    &-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #000;
+    }
     &-text {
       font-size: 10px;
       color: black;
       padding-left: 10px;
+      @include fluid(width, 100px, 80px);
     }
     &-link {
       display: flex;
       align-items: center;
-      width: 40%;
     }
   }
 }
@@ -46,8 +50,8 @@
   &__link {
     color: black;
     padding: 10px;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
     transition: 0.2s linear;
   }
   &__contacts {
@@ -62,8 +66,11 @@
       margin-left: 5px;
     }
     &-text {
-      font-size: 14px;
-      font-weight: 300;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    a {
+      color: black;
     }
   }
 }
@@ -75,7 +82,8 @@
     margin-top: 70px;
     &-title {
       font-weight: 400;
-      font-size: 60px;
+      font-size: 70px;
+      line-height: 1.1;
       margin: 0 auto;
       text-align: center;
       padding-bottom: 50px;

@@ -1,5 +1,5 @@
 ---
-import logo from '../images/logo.svg';
+import logo from '../images/logo.png';
 import contact from '../images/icons/ok.svg';
 ---
 
@@ -9,26 +9,29 @@ import contact from '../images/icons/ok.svg';
       <div class="header__logo">
         <a class="header__logo-link" href="">
           <img class="header__logo-img" src={logo} alt="logo-img" />
+          <h2 class="header__logo-title">Заряд тут!</h2>
           <p class="header__logo-text">пауэрбанк станции</p>
         </a>
       </div>
       <nav class="nav">
         <ul class="nav__items">
-          <a href="#" class="nav__link">
-            <li class="nav__item">Для бизнеса</li>
-          </a>
-          <a href="#" class="nav__link">
-            <li class="nav__item">Тарифы</li>
-          </a>
-          <a href="#" class="nav__link">
-            <li class="nav__item">О нас</li>
-          </a>
-          <a href="#" class="nav__link">
-            <li class="nav__item">Карта станций</li>
-          </a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Для бизнеса</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Тарифы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Карта станций</a>
+          </li>
         </ul>
         <div class="nav__contacts">
-          <div class="nav__contacts-text">Контакты и поддержка</div>
+          <a href="#">
+            <div class="nav__contacts-text">Контакты и поддержка</div>
+          </a>
           <img src={contact} alt="contacts-img" class="nav__contacts-img" />
         </div>
       </nav>
