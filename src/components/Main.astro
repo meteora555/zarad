@@ -1,6 +1,9 @@
 ---
 import info from '../images/info.png';
 import set from '../images/set-icon.svg';
+import founder from '../images/founder.png';
+import arrow from '../images/icons/arrow-right.png';
+import video from '../video/circle.mp4';
 ---
 
 <div class="container">
@@ -15,19 +18,62 @@ import set from '../images/set-icon.svg';
       <button class="info__desc-btn">Узнать подробнее</button>
     </div>
   </div>
-  <div class="advantages-block">
-    <div class="aside__desc">
-      <h2 class="aside-title">Инвестируй и зарабатывай вместе с нами</h2>
-      <p class="aside-text">
+  <div class="advantages">
+    <div class="advantages__aside">
+      <h2 class="advantages__aside-title">Инвестируй и зарабатывай вместе с нами</h2>
+      <p class="advantages__aside-text">
         Стань частью самой масштабной сети пауэрбанк-шеринга на европейском континенте
       </p>
-      <button class="aside-btn">Стать партнёром</button>
+      <button class="advantages__aside-btn">
+        <a href="#">Стать партнёром</a>
+        <img src={arrow} alt="arrow-icon" />
+      </button>
+      <video class="advantages__aside-video" src={video} autoplay muted playsinline loop></video>
     </div>
-    <div class="advantages">
-      <div class="advantages__item">
-        <img src={set} alt="set-icon" />
-        <h4></h4>
-      </div>
+    <div class="advantages__main">
+      <ul class="advantages__main__list">
+        <li class="advantages__main__item">
+          <img class="advantages__main__item-img" src={set} alt="set-icon" />
+          <h4 class="advantages__main__item-title">
+            Без паушального взноса и дополнительных платежей
+          </h4>
+        </li>
+        <li class="advantages__main__item">
+          <img class="advantages__main__item-img" src={set} alt="set-icon" />
+          <h4 class="advantages__main__item-title">
+            Поделимся опытом и контактами сетевых партнёров
+          </h4>
+        </li>
+        <li class="advantages__main__item">
+          <img class="advantages__main__item-img" src={set} alt="set-icon" />
+          <h4 class="advantages__main__item-title">Онлайн-обучение продажам с наставником</h4>
+        </li>
+        <li class="advantages__main__item">
+          <img class="advantages__main__item-img" src={set} alt="set-icon" />
+          <h4 class="advantages__main__item-title">Работаем с проектами любого уровня</h4>
+        </li>
+        <li class="advantages__main__item">
+          <img class="advantages__main__item-img" src={set} alt="set-icon" />
+          <h4 class="advantages__main__item-title">Личный аккаунт-менеджер и техподдержка 24/7</h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="founder">
+    <div class="founder__about">
+      <img src={founder} alt="founder__about-img" class="founder__about-img" />
+      <h3 class="founder__about-name">Иван Иванов</h3>
+      <p class="founder__about-text">основатель «Заряд тут!»</p>
+    </div>
+    <div class="founder__text">
+      <p>
+        «У меня, как и у большинства читателей этого текста, есть несколько пауэрбанков дома и я
+        постоянно забываю их зарядить. По закону подлости вспоминаю об этом, когда на телефоне
+        остается пара процентов, а я опаздываю на встречу.»
+      </p>
+      <button class="founder__text-btn">
+        <p>Подробнее о нас</p>
+      </button>
     </div>
   </div>
 </div>
