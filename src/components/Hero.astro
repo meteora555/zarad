@@ -2,7 +2,7 @@
 import ios from '../images/icons/ios.svg';
 import play from '../images/icons/play.svg';
 import rub from '../images/icons/rub.svg';
-import phone from '../images/phone.webp';
+import phone from '../images/phone.jpg';
 import map from '../images/map.jpeg';
 import set from '../images/set-icon.svg';
 import arrow from '../images/icons/arrow-right.png';
@@ -77,6 +77,38 @@ import promo from '../images/promo_qr.png';
     <div class="promo__info">
       <img src={set} alt="promo-img" class="promo__info-img" />
       <h2 class="promo__info-text">Бери заряд и заряжайся по пути</h2>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <h2 class="tabs-title">Для всех, кто в движении</h2>
+    <div class="tabs__name">
+      <button class="tabs__name-item tabs-active">Руководитель</button>
+      <button class="tabs__name-item">Курьер</button>
+      <button class="tabs__name-item">Менеджер</button>
+    </div>
+    <div class="tabs__content">
+      <div class="tabs__content__left">
+        <h2 class="tabs__content__left-title">
+          «Пользуюсь несколько раз в месяц, когда внезапно сядет батарея. Не переживаю об этом и не
+          парюсь с зарядкой своего пауэрбанка, когда "Заряд тут!" есть буквально повсюду»
+        </h2>
+        <div class="tabs__content__left__person">
+          <img
+            src="./images/founder.png"
+            alt="person-img"
+            class="tabs__content__left__person-img"
+          />
+          <div class="tabs__content__left__person-desc">
+            <p class="tabs__content__left__person-name">Денис Теплов</p>
+            <p class="tabs__content__left__person-text">OOO «Иванов и ко»</p>
+          </div>
+        </div>
+      </div>
+      <div class="tabs__content__right">
+        <img src="./images/month-1.svg" alt="month" class="tabs__content__right-month" />
+        <div class="tabs__content__right-money">Средний расход: 282 ₽/мес</div>
+      </div>
     </div>
   </div>
 </div>
