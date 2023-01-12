@@ -1,4 +1,5 @@
 @import './global.scss';
+
 //pages
 @import './pages/_about.scss';
 
@@ -147,6 +148,10 @@
       width: 80%;
       position: relative;
       z-index: 3;
+      background-image: url(/src/images/map.jpeg);
+      background-size: 59%;
+      background-repeat: no-repeat;
+      background-position: 75px 20px;
     }
     &-map {
       position: absolute;
@@ -752,6 +757,7 @@
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
+  display: none;
   &__bar {
     width: 50px;
     height: 4px;
@@ -826,3 +832,4 @@
 .visible {
   display: inherit;
 }
+@import './media.scss';
