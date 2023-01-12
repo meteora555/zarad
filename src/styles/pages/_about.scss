@@ -10,9 +10,9 @@
   }
 }
 .about {
-  @include fluid(font-size, 60px, 80px);
+  @include fluid(font-size, 57px, 80px);
   font-size: 40px;
-  margin: 40px 200px;
+  margin: 40px auto;
   text-align: center;
   line-height: 1.1;
   font-weight: 600;
@@ -133,7 +133,7 @@
   h2{
     @include fluid(font-size, 60px, 80px);
     font-size: 40px;
-    margin: 40px 200px;
+    margin: 40px auto;
     text-align: center;
     line-height: 1.1;
     font-weight: 600;
