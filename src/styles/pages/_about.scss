@@ -1,3 +1,254 @@
+.aboutWrapper{
+  width: 82%;
+  margin: 40px auto;
+  h2{
+    @include fluid(font-size, 40px, 55px);
+    font-weight: 600;
+    @include fluid(margin-top, 40px, 60px);
+    @include fluid(margin-bottom, 40px, 60px);
+    text-align: center;
+  }
+}
 .about {
+  @include fluid(font-size, 60px, 80px);
   font-size: 40px;
+  margin: 40px 200px;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.powerbanks{
+  width: 100%;
+  border-radius: 30px;
+}
+.storytell{
+  @include fluid(margin-top, 100px, 150px);
+  @include fluid(margin-bottom, 100px, 150px);
+  .text{
+    @include fluid(font-size, 20px, 30px);
+    @include fluid(width, 800px, 1000px);
+    margin: 15px auto;
+  }
+}
+.founder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  img{
+    @include fluid(width, 200px, 250px);
+  }
+  p{
+    @include fluid(font-size, 20px, 30px);
+  }
+  .name{
+    margin-top: 20px;
+  }
+  .position{
+    color: #364b7d;
+  }
+}
+
+.card{
+  transition: transform .2s cubic-bezier(.175, .885, .32, 1.275),-webkit-transform .2s cubic-bezier(.175, .885, .32, 1.275);
+}
+.card:hover{
+  transform: scale(1.04);
+}
+.stat{
+  position: relative;
+  .cardStat{
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 13px 0 rgb(0 0 0 / 8%), 0 20px 80px 0 rgb(0 0 0 / 5%);
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    padding: 30px 20px;
+    width: 350px;
+    justify-content: space-between;
+  }
+  .mainNumberStat{
+    @include fluid(font-size, 40px, 55px);
+    font-weight: 600;
+    color: #364b7d;
+    margin-bottom: 15px;
+  }
+  .infoStat{
+    font-size: 18px;
+  }
+  .percentsStat{
+    font-size: 23px;
+    color: #0076cb;
+    background-color: rgba(0,118,203,.1);
+    border-radius: 30px;
+    width: max-content;
+    padding: 7px 15px;
+  }
+  img{
+    border-radius: 30px;
+    box-shadow: 0 4px 13px 0 rgb(0 0 0 / 8%), 0 20px 80px 0 rgb(0 0 0 / 5%);
+  }
+  img:nth-of-type(1){
+    margin-bottom: 360px;
+    max-width: 900px;
+  }
+  img:nth-of-type(2){
+    margin-left: 300px;
+    margin-right: 0;
+    max-width: 700px;
+  }
+  img:nth-of-type(3){
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+    max-width: 570px;
+    z-index: -1;
+  }
+  .cardStat:nth-of-type(1){
+    position: absolute;
+    top: 570px;
+    right: 400px;
+  }
+  .cardStat:nth-of-type(2){
+    position: absolute;
+    top: 720px;
+    left: 0px;
+  }
+  .cardStat:nth-of-type(3){
+    position: absolute;
+    top: 350px;
+    left: 200px;
+  }
+  .cardStat:nth-of-type(4){
+    position: absolute;
+    top: 200px;
+    right: 200px;
+  }
+}
+
+.reviews{
+  @include fluid(margin-top, 100px, 150px);
+  @include fluid(margin-bottom, 100px, 150px);
+  h2{
+    @include fluid(font-size, 60px, 80px);
+    font-size: 40px;
+    margin: 40px 200px;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+}
+.swiperArticles{
+  padding: 30px 20px;
+}
+.article{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 350px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 7%), 0 2px 3px 0 rgb(0 0 0 / 3%), 0 4px 5px 0 rgb(0 0 0 / 2%), 0 8px 10px 0 rgb(0 0 0 / 2%), 0 15px 18px 0 rgb(0 0 0 / 2%), 0 36px 45px 0 rgb(0 0 0 / 2%);
+  img{
+    height: 40px;
+    margin-top: 30px;
+  }
+  .articleInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p{
+    font-size: 25px;
+    padding: 25px;
+    text-align: center;
+  }
+  a{
+    font-size: 25px;
+    color: #fff;
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .retail{
+    background-color: #ea534e;
+  }
+  .snob, .commersant, .village{
+    background-color: black;
+  }
+  .rusbase{
+    background-color: #ae485c;
+  }
+  .cnews{
+    background-color: #17479d;
+  }
+  .rbk{
+    background-color: #2a8288;
+  }
+  .forbes{
+    background-color: #030b12;
+  }
+  .tass{
+    background-color: #2c2a6f;
+  }
+  .afisha{
+    background-color: #f66;
+  }
+  .ad{
+    background-color: #e41e0a;
+  }
+  .vc{
+    background-color: #feebef;
+    color: black;
+  }
+}
+
+.review{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 350px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 7%), 0 2px 3px 0 rgb(0 0 0 / 3%), 0 4px 5px 0 rgb(0 0 0 / 2%), 0 8px 10px 0 rgb(0 0 0 / 2%), 0 15px 18px 0 rgb(0 0 0 / 2%), 0 36px 45px 0 rgb(0 0 0 / 2%);
+  .reviewInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    img{
+      height: 40px;
+      margin-top: 30px;
+      padding-left: 25px;
+    }
+    p{
+      font-size: 25px;
+      padding: 25px;
+    }
+  }
+  .sourceInfo{
+    display: flex;
+    align-items: center;
+    background-color: #dae9fb;
+    width: 100%;
+    padding: 20px 25px;
+    img{
+      width: 20px;
+      margin-right: 15px;
+    }
+    p{
+      font-size: 25px;
+      color: #364b7d;
+    }
+  }
+  
 }
