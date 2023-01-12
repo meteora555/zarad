@@ -6,6 +6,21 @@ import arrow from '../images/icons/arrow-right.png';
 import video from '../video/circle.mp4';
 ---
 
+<script>
+  // получаем массив вопросов и ответов блоков контента
+
+  const question = document.querySelectorAll('.question__subtitle'),
+    answer = document.querySelectorAll('.question__answer');
+
+  //Запускаем цикл и тоглим класс
+
+  for (let i = 0; i < question.length; i++) {
+    question[i].addEventListener('click', () => {
+      answer[i].classList.toggle('question__hidden');
+    });
+  }
+</script>
+
 <div class="container">
   <div class="info">
     <img src={info} alt="info-img" />
@@ -86,7 +101,7 @@ import video from '../video/circle.mp4';
         class="question__subtitle-img arrow-down arrow-up"
       />
     </div>
-    <div class="question__answer">
+    <div class="question__answer question__hidden">
       Везде по-разному. Средняя стоимость — примерно 100 ₽ в сутки. Чтобы узнать действующий тариф,
       выбери зарядную станцию в приложении.
     </div>
@@ -98,7 +113,7 @@ import video from '../video/circle.mp4';
         class="question__subtitle-img arrow-down arrow-up"
       />
     </div>
-    <div class="question__answer">
+    <div class="question__answer question__hidden">
       <ul class="question__answer-list">
         <li class="question__answer-item">
           Скачай приложение «Заряд тут!» в App Store, Google Play или HUAWEI AppGallery.
@@ -122,7 +137,7 @@ import video from '../video/circle.mp4';
         class="question__subtitle-img arrow-down arrow-up"
       />
     </div>
-    <div class="question__answer">
+    <div class="question__answer question__hidden">
       В разделе «Карта станции» Станции могут быть в наших цветах — сине-жёлтые. А могут быть
       оформлены в цветах бренда нашего партнёра.
     </div>
@@ -134,7 +149,7 @@ import video from '../video/circle.mp4';
         class="question__subtitle-img arrow-down arrow-up"
       />
     </div>
-    <div class="question__answer">
+    <div class="question__answer question__hidden">
       Полностью безопасен — как обычная зарядка. Наши пауэрбанки производят с соблюдением всех
       международных норм, сертификацией Apple и стран ЕАС.
     </div>

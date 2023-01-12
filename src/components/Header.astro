@@ -1,9 +1,33 @@
 ---
 import logo from '../images/logo.png';
 import contact from '../images/icons/ok.svg';
-import Burger from './Burger.astro';
 ---
 
+<script>
+  // Создаем функцию, для отслеживания клика по бургеру и анимация бургера, путем удаления и добавления классов
+  function handleClick() {
+    const burgerBtn = document.querySelector('.burger'),
+      burgerBar = document.querySelectorAll('.burger__bar'),
+      burgerWindow = document.querySelector('.burger__window'),
+      burgerWrapper = document.querySelector('.wrapper');
+    burgerBtn.addEventListener('click', () => {
+      burgerBar.forEach((item) => {
+        if (item.classList[1] === 'burger-unclick') {
+          item.classList.remove('burger-unclick');
+          item.classList.add('burger-clicked');
+          burgerWindow.classList.remove('hidden');
+          burgerWrapper.classList.add('wrapper_blur');
+        } else {
+          item.classList.add('burger-unclick');
+          item.classList.remove('burger-clicked');
+          burgerWindow.classList.add('hidden');
+          burgerWrapper.classList.remove('wrapper_blur');
+        }
+      });
+    });
+  }
+  handleClick();
+</script>
 <header>
   <div class="container">
     <div class="header">
@@ -35,7 +59,37 @@ import Burger from './Burger.astro';
           </a>
           <img src={contact} alt="contacts-img" class="nav__contacts-img" />
         </div>
-        <Burger />
+        <div class="burger">
+          <div class="burger__bar burger-unclick"></div>
+          <div class="burger__bar burger-unclick"></div>
+          <div class="burger__bar burger-unclick"></div>
+        </div>
+        <div class="burger__window hidden">
+          <ul class="burger__window-list">
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">Для бизнеса</a>
+            </li>
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">Тарифы</a>
+            </li>
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">О нас</a>
+            </li>
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">Карта станций</a>
+            </li>
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">Контакты и поддержка</a>
+            </li>
+            <li class="burger__window-item">
+              <a href="#" class="burger__window-link">Установить приложение</a>
+            </li>
+          </ul>
+          <div class="burger__window-tel">
+            <img src={contact} alt="tel-icon" />
+            8 800 123 45 67
+          </div>
+        </div>
       </nav>
     </div>
   </div>

@@ -1,9 +1,20 @@
 @import './global.scss';
+@import './pages/_about.scss';
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
   flex: 1 0 auto;
+  z-index: 4;
+}
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  z-index: 4;
+}
+.wrapper_blur {
+  filter: blur(10px);
 }
 
 //header
@@ -312,6 +323,9 @@
   }
   &-hidden {
     display: none;
+  }
+  &-show {
+    display: flex;
   }
 }
 
@@ -700,22 +714,87 @@
       @include fluid(padding-bottom, 10px, 10px);
     }
   }
+  &__hidden {
+    display: none;
+  }
 }
 
 // Burger
 
 .burger {
-  height: 100%;
-  width: 4em;
+  height: 35px;
+  width: 50px;
+  @include fluid(margin-top, 2px, 3px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
+  &__bar {
+    width: 50px;
+    height: 4px;
+    background-color: rgb(0, 183, 255);
+    border-radius: 20px;
+  }
 
   &-unclick {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+  &-clicked {
+    transition: ease-out 0.5s;
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 20px);
+      transition: ease-out 0.5s;
+    }
+    &:nth-child(2) {
+      transform: scale(0.01);
+      transition: ease-out 0.5s;
+    }
+    &:nth-child(3) {
+      transform: rotate(135deg) translate(-2px, 20px);
+      transition: ease-out 0.5s;
+    }
+  }
+  &__window {
+    position: absolute;
+    top: 50px;
+    // left: 56%;
+    width: 20%;
+    z-index: 999999999;
+    background-color: #efeded;
+    border: 1px solid #9ebee0;
+    padding: 15px;
+    border-radius: 20px;
+    &-list {
+      @include fluid(margin-bottom, 30px, 40px);
+    }
+    &-item {
+      @include fluid(margin-bottom, 10px, 15px);
+      position: relative;
+      text-align: center;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #9ebee0;
+        bottom: -3px;
+        left: 0;
+      }
+    }
+    &-link {
+      color: black;
+    }
+    &-tel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        @include fluid(margin-right, 10px, 20px);
+        width: 10%;
+      }
+    }
   }
 }
 .hidden {
