@@ -2,12 +2,18 @@
   .nav__items {
     display: none;
   }
+  .tabs {
+    &__name {
+      width: 40%;
+    }
+  }
   .burger {
     display: flex;
     &__window {
       width: 30%;
     }
   }
+
   .hero {
     padding: 0 10px;
     &__content {
@@ -34,6 +40,7 @@
       padding: 0 20px;
       &__left-title {
         margin-right: 10px;
+        font-size: 18px;
       }
       &__right {
         width: 40%;
@@ -54,12 +61,172 @@
   }
   .info {
     flex-wrap: wrap;
+    &__desc {
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 14px;
+      }
+    }
+    img {
+      width: 60%;
+    }
   }
   .advantages {
     flex-wrap: wrap;
     justify-content: center;
     &__aside {
       margin-bottom: 50px;
+    }
+  }
+  .footer {
+    &__head {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__logo {
+      @include fluid(margin-bottom, 40px, 10px);
+    }
+    &__link-row {
+      flex-wrap: wrap;
+      a {
+        padding: 10px;
+      }
+    }
+    &__info {
+      flex-wrap: wrap;
+      justify-content: center;
+      &-link {
+        font-size: 20px;
+      }
+      &__contacts {
+        &-link {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    &__info {
+      justify-content: center;
+      &-text {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      &-aside {
+        width: 50%;
+      }
+      &-phone {
+        background-size: 60%;
+        background-position: 55px 10px;
+      }
+    }
+  }
+  .price {
+    justify-content: center;
+    padding: 10px;
+    &__left {
+      padding: 10px;
+      &-title {
+        font-size: 14px;
+      }
+      &-text {
+        font-size: 12px;
+        padding: 0;
+      }
+    }
+    &__right {
+      padding: 20px;
+      &-title {
+        font-size: 20px;
+      }
+    }
+  }
+  .tabs {
+    &__name {
+      width: 50%;
+    }
+    &__content__left-title {
+      font-size: 20px;
+    }
+  }
+  .footer {
+    &__link-row {
+      flex-wrap: wrap;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav__contacts {
+    display: none;
+  }
+
+  .hero {
+    &__content {
+      &-title {
+        font-size: 26px;
+      }
+    }
+    &__info {
+      &-phone {
+        background-position: 40px 10px;
+      }
+    }
+  }
+  .price {
+    &__right {
+      &-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .promo__info {
+    &-text {
+      font-size: 16px;
+    }
+  }
+  .gift {
+    width: 80px;
+    height: 130px;
+    &-text {
+      font-size: 10px;
+    }
+  }
+  .tabs {
+    &__name {
+      width: 100%;
+    }
+    &__content {
+      &__left-title {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+  .founder {
+    &__text {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .advantages {
+    padding: 0 20px;
+  }
+  .question {
+    padding: 0 10px;
+    &__subtitle {
+      margin: 0 auto;
+    }
+    &__answer {
+      margin: 0 auto;
     }
   }
 }
