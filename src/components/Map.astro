@@ -1,0 +1,19 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+---
+
+<div class="wrapper">
+  <div class="container">
+    <Header />
+    <div class="map">
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A588104f37a0f7f771c1f3d552f651c5d6e0dd8fd82f12e0930576f5349eb55d0&width=744&height=521&lang=ru_RU&scroll=true"
+      ></script>
+    </div>
+    <Footer />
+  </div>
+</div>

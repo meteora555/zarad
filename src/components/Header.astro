@@ -16,7 +16,22 @@ import contact from '../images/icons/ok.svg';
       <nav class="nav">
         <ul class="nav__items">
           <li class="nav__item">
-            <a class="nav__link" href="/business">Для бизнеса</a>
+            <button class="nav__link nav__link-btn">Для бизнеса</button>
+            <img src="./images/icons/arrow-blue.svg" alt="" class="nav__link-img" />
+            <div class="nav__link__content">
+              <a class="nav__link__content-business" href="/business">
+                <h5>Разместить у себя</h5>
+                <p>Зарядные станции в твоём заведении</p>
+              </a>
+              <a class="nav__link__content-business" href="#">
+                <h5>Инвестиции и франшиза</h5>
+                <p>Зарабатывайте вместе с нами</p>
+              </a>
+              <a class="nav__link__content-business" href="#">
+                <h5>Подробнее про оборудование</h5>
+                <p>Пауэрбанки и зарядные станции</p>
+              </a>
+            </div>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="/pricing">Тарифы</a>
@@ -71,7 +86,7 @@ import contact from '../images/icons/ok.svg';
 </header>
 <script>
   // Создаем функцию, для отслеживания клика по бургеру и анимация бургера, путем удаления и добавления классов
-  function handleClick() {
+  function handlerClick() {
     const burgerBtn = document.querySelector('.burger'),
       burgerBar = document.querySelectorAll('.burger__bar'),
       burgerWindow = document.querySelector('.burger__window'),
@@ -92,5 +107,18 @@ import contact from '../images/icons/ok.svg';
       });
     });
   }
-  handleClick();
+  function handlerMenuClick() {
+    const menuBtn = document.querySelector('.nav__link-btn'),
+      menuContent = document.querySelector('.nav__link__content'),
+      arrow = document.querySelector('.nav__link-img');
+
+    // question__subtitle-img-up
+    menuBtn.addEventListener('click', () => {
+      console.log('123');
+      menuContent.classList.toggle('visible');
+      arrow.classList.toggle('question__subtitle-img-up');
+    });
+  }
+  handlerClick();
+  handlerMenuClick();
 </script>
