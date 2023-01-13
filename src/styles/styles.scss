@@ -6,17 +6,9 @@
 @import './pages/_pricing.scss';
 
 .container {
-  max-width: 1140px;
-  margin: 0 auto;
-  flex: 1 0 auto;
-  z-index: 4;
+  @include container;
 }
-.wrapper {
-  max-width: 1140px;
-  margin: 0 auto;
-  flex: 1 0 auto;
-  z-index: 4;
-}
+
 .wrapper_blur {
   filter: blur(10px);
 }
@@ -29,25 +21,19 @@
   justify-content: space-between;
   &__logo {
     display: flex;
-    transition: 0.2s linear;
-    &:hover {
-      scale: 1.1;
-      background-color: rgb(211, 208, 208);
-      border-radius: 10px;
-    }
     &-img {
       width: 10%;
     }
     &-title {
-      font-size: 30px;
+      @include fluid(font-size, 14px, 34px);
       font-weight: 800;
       color: #000;
     }
     &-text {
-      font-size: 10px;
+      @include fluid(font-size, 10px, 14px);
       color: black;
-      padding-left: 10px;
-      @include fluid(width, 100px, 80px);
+      @include fluid(padding-left, 8px, 10px);
+      @include fluid(width, 80px, 100px);
     }
     &-link {
       display: flex;
@@ -69,8 +55,8 @@
   }
   &__link {
     color: black;
-    padding: 10px;
-    font-size: 16px;
+    @include fluid(padding, 4px, 10px);
+    @include fluid(font-size, 14px, 18px);
     font-weight: 600;
     transition: 0.2s linear;
     &-btn {
@@ -80,7 +66,7 @@
       font-weight: 400;
     }
     &-img {
-      width: 18px;
+      @include fluid(width, 10px, 18px);
       @include fluid(margin-right, 6px, 10px);
     }
     &__content {
@@ -98,12 +84,10 @@
         h5 {
           font-size: 15px;
           color: black;
-          // text-align: center;
         }
         p {
           @include fluid(margin-bottom, 5px, 10px);
-          font-size: 12px;
-          // text-align: center;
+          @include fluid(font-size, 10px, 12);
           color: rgb(162, 162, 162);
         }
       }
@@ -112,16 +96,17 @@
   &__contacts {
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin-left: 80px;
+    @include fluid(padding, 8px, 10px);
+    @include fluid(margin-left, 30px, 80px);
     transition: 0.2s linear;
     cursor: pointer;
     &-img {
       width: 8%;
-      margin-left: 5px;
+      @include fluid(margin-left, 2px, 5px);
     }
     &-text {
       font-size: 16px;
+      @include fluid(font-size, 14px, 18px);
       font-weight: 600;
     }
     a {
@@ -135,21 +120,26 @@
 .hero {
   &__content {
     margin-top: 70px;
+    @include fluid(margin-top, 40px, 90px);
     &-title {
       font-weight: 400;
       font-size: 70px;
+      @include fluid(font-size, 30px, 70px);
       line-height: 1.1;
       margin: 0 auto;
       text-align: center;
       padding-bottom: 50px;
+      @include fluid(padding-bottom, 30px, 50px);
     }
     &-btn {
       padding-top: 20px;
+      @include fluid(padding-top, 14px, 20px);
       display: flex;
       align-items: center;
       justify-content: center;
       a {
         margin-right: 15px;
+        @include fluid(margin-right, 10px, 15px);
         img {
           cursor: pointer;
         }
@@ -168,15 +158,16 @@
   }
   &__info {
     display: flex;
-    margin-top: 90px;
-    margin-bottom: 50px;
+    @include fluid(margin-top, 60px, 90px);
+    @include fluid(margin-bottom, 30px, 50px);
 
     &-text {
       font-weight: 400;
-      font-size: 50px;
+      @include fluid(font-size, 40px, 55px);
+      @include fluid(padding, 24px, 30px);
+      @include fluid(padding, 20px, 30px);
       max-width: 60%;
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
       border-radius: 20px;
       p {
         color: rgb(157, 157, 157);
@@ -211,58 +202,58 @@
 .btn__install {
   background-color: black;
   color: #fff;
-  padding: 30px;
+  @include fluid(padding, 24px, 30px);
   border-radius: 50px;
   text-align: center;
-  font-size: 20px;
-  width: 350px;
+  @include fluid(font-size, 14px, 20px);
+  @include fluid(width, 250px, 350px);
   cursor: pointer;
   display: flex;
   align-items: center;
   p {
     color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
+    @include fluid(font-size, 14px, 20px);
+    @include fluid(margin-right, 8px, 10px);
   }
   img {
     margin-top: 2px;
-    width: 30px;
+    @include fluid(width, 20px, 30px);
   }
 }
 
 .price {
   background-color: rgb(216, 213, 213);
-  padding: 35px;
-  border-radius: 30px;
+  @include fluid(padding, 25px, 35px);
   @include fluid(margin-bottom, 40px, 70px);
+  border-radius: 30px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   &__left {
-    padding: 30px;
+    @include fluid(padding, 20px, 30px);
     width: 70%;
     &-img {
       width: 10%;
-      margin-bottom: 20px;
+      @include fluid(margin-bottom, 14px, 20px);
     }
     &-title {
-      margin-bottom: 20px;
-      font-size: 50px;
+      @include fluid(margin-bottom, 14px, 20px);
+      @include fluid(font-size, 36px, 50);
       font-weight: 300;
     }
     &-text {
       width: 70%;
       font-weight: 300;
-      padding-left: 9px;
+      @include fluid(padding-left, 5px, 9px);
     }
   }
   &__right {
     background-color: #efefef;
-    padding: 30px;
+    @include fluid(padding, 20px, 30px);
     border-radius: 30px;
     &-title {
-      font-size: 30px;
-      margin-bottom: 50px;
+      @include fluid(font-size, 22px, 30px);
+      @include fluid(margin-bottom, 38px, 50px);
       text-align: center;
     }
     &-btn {
@@ -272,20 +263,20 @@
       color: #fff;
       text-align: center;
       a {
-        margin-right: 20px;
+        @include fluid(margin-right, 14px, 20px);
         cursor: pointer;
       }
 
       &-link {
-        padding: 30px;
+        @include fluid(padding, 22px, 30px);
         border-radius: 50px;
         background-color: black;
         display: flex;
         align-items: center;
-        margin-right: 10px;
+        @include fluid(margin-right, 6px, 10px);
         cursor: pointer;
         p {
-          margin-right: 10px;
+          @include fluid(margin-right, 6px, 10px);
         }
         img {
           width: 30px;
@@ -299,26 +290,26 @@
 .tabs {
   @include fluid(margin-bottom, 40px, 80px);
   &-title {
-    font-size: 30px;
-    text-align: center;
+    @include fluid(font-size, 22px, 30px);
     @include fluid(margin-bottom, 10px, 30px);
+    text-align: center;
   }
 
   &__name {
     display: flex;
     justify-content: center;
-    padding: 8px;
+    @include fluid(padding, 6px, 8px);
+    @include fluid(margin-bottom, 20px, 30px);
     background-color: #f1f0f0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
     width: 35%;
     margin: 0 auto;
-    @include fluid(margin-bottom, 20px, 30px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     &-item {
-      padding: 8px;
-      font-size: 18px;
-      background-color: #f1f0f0;
+      @include fluid(padding, 6px, 8px);
+      @include fluid(font-size, 12px, 18px);
       @include fluid(margin-right, 10px, 20px);
+      background-color: #f1f0f0;
     }
   }
   &-active {
@@ -334,10 +325,10 @@
       width: 50%;
       &-title {
         @include fluid(margin-bottom, 20px, 30px);
+        @include fluid(padding, 8px, 10px);
+        @include fluid(font-size, 16px, 30px);
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        padding: 10px;
-        font-size: 30px;
       }
       &__person {
         display: flex;
@@ -349,11 +340,11 @@
           width: 10%;
         }
         &-name {
-          font-size: 14px;
+          @include fluid(font-size, 18px, 22px);
           font-weight: 300;
         }
         &-text {
-          font-size: 14px;
+          @include fluid(font-size, 12px, 18px);
         }
       }
     }
@@ -365,7 +356,7 @@
       }
       &-money {
         border: 1px solid #9ebee0;
-        padding: 10px;
+        @include fluid(padding, 6px, 10px);
         width: 70%;
         text-align: center;
         border-radius: 20px;
@@ -388,23 +379,23 @@
   background-color: #9ebee0;
   border-radius: 30px;
   display: flex;
-  margin-bottom: 60px;
+  @include fluid(margin-bottom, 30px, 60px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   &__desc {
-    padding: 30px;
+    @include fluid(padding, 20px, 30px);
     &-title {
-      padding-top: 30px;
-      font-size: 45px;
-      margin-bottom: 30px;
+      @include fluid(padding-top, 20px, 30px);
+      @include fluid(font-size, 32px, 46px);
+      @include fluid(margin-bottom, 22px, 30px);
       font-weight: 400;
     }
     &-text {
-      font-size: 18px;
+      @include fluid(font-size, 12px, 18px);
+      @include fluid(margin-bottom, 22px, 30px);
       font-weight: 300;
-      margin-bottom: 30px;
     }
     &-btn {
-      padding: 15px;
+      @include fluid(padding, 12px, 15px);
       border-radius: 20px;
     }
   }
@@ -419,27 +410,27 @@
   justify-content: space-between;
   @include fluid(margin-bottom, 40px, 50px);
   &__aside {
-    @include fluid(width, 650px, 400px);
+    @include fluid(width, 400px, 650px);
     &-title {
-      font-size: 44px;
-      margin-bottom: 30px;
+      @include fluid(font-size, 34px, 48px);
+      @include fluid(margin-bottom, 22px, 30px);
     }
     &-text {
-      font-size: 20px;
+      @include fluid(font-size, 14px, 20px);
+      @include fluid(margin-bottom, 32px, 40px);
       font-weight: 200;
-      margin-bottom: 40px;
     }
     &-btn {
       display: flex;
       align-items: center;
-      padding: 20px;
+      @include fluid(padding, 14px, 20px);
       border-radius: 50px;
       background-color: black;
-      @include fluid(width, 250px, 270px);
+      @include fluid(width, 250px, 300px);
       a {
         color: #fff;
-        font-size: 20px;
-        padding-left: 7px;
+        @include fluid(font-size, 14px, 20px);
+        @include fluid(padding-left, 5px, 7px);
       }
       img {
         @include fluid(margin-top, 2px, 2px);
@@ -455,6 +446,7 @@
   }
   &__main {
     width: 500px;
+    @include fluid(width, 400px, 500px);
     &__item {
       @include fluid(padding-bottom, 10px, 20px);
       &-img {
@@ -462,7 +454,7 @@
         @include fluid(margin-bottom, 10px, 20px);
       }
       &-title {
-        font-size: 20px;
+        @include fluid(font-size, 14px, 26px);
       }
     }
   }
@@ -478,7 +470,7 @@
     }
     &-name {
       text-align: center;
-      font-size: 24px;
+      @include fluid(font-size, 18px, 24px);
       word-break: break-all;
     }
     &-text {
@@ -492,7 +484,7 @@
     color: #000;
     background-color: #fff;
     border-radius: 20px;
-    font-size: 28px;
+    @include fluid(font-size, 22px, 28px);
     line-height: 1.4;
     font-weight: 300;
     &-btn {
@@ -501,7 +493,7 @@
       background-color: #9ebee0;
       border-radius: 30px;
       p {
-        font-size: 14px;
+        @include fluid(font-size, 12px, 14px);
         font-weight: 200;
         padding: 2px 15px;
       }
@@ -513,14 +505,14 @@
   justify-content: space-evenly;
   align-items: center;
   @include fluid(margin-top, 50px, 65px);
-  margin-bottom: 80px;
+  @include fluid(margin-bottom, 45px, 80px);
   &-qr {
     width: 20%;
     height: 20%;
   }
   &__mobile {
     &-phone {
-      width: 300px;
+      @include fluid(width, 250px, 300px);
       background-image: url(../images/map.jpeg);
       background-size: 59%;
       background-repeat: no-repeat;
@@ -540,7 +532,7 @@
       @include fluid(margin-bottom, 20px, 30px);
     }
     &-text {
-      font-size: 30px;
+      @include fluid(font-size, 24px, 34px);
     }
   }
 }
@@ -554,9 +546,8 @@
 .footer {
   background-color: black;
   border-radius: 10px 10px 0 0;
-  padding: 30px;
+  @include fluid(padding, 22px, 30px);
   margin-bottom: -350px;
-  // flex: 0 0 auto;
 
   &__logo {
     display: flex;
@@ -564,15 +555,15 @@
       width: 10%;
     }
     &-title {
-      font-size: 30px;
+      @include fluid(font-size, 24px, 30px);
       font-weight: 800;
       color: #fff;
     }
     &-text {
-      font-size: 15px;
-      color: #fff;
-      padding-left: 10px;
+      @include fluid(font-size, 10px, 15px);
+      @include fluid(padding-left, 5px, 10px);
       @include fluid(width, 100px, 80px);
+      color: #fff;
     }
     &-link {
       display: flex;
@@ -592,10 +583,10 @@
         @include fluid(margin-right, 10px, 20px);
       }
       &-img {
-        width: 45px;
+        @include fluid(width, 35px, 50px);
       }
       &-btn {
-        padding: 15px;
+        @include fluid(padding, 12px, 15px);
         display: flex;
         align-items: center;
         background-color: #fff;
@@ -603,11 +594,11 @@
         a {
           text-align: center;
           color: black;
-          font-size: 16px;
+          @include fluid(font-size, 12px, 20px);
         }
         img {
           @include fluid(margin-left, 5px, 5px);
-          width: 30px;
+          @include fluid(width, 22px, 30px);
         }
       }
     }
@@ -629,7 +620,7 @@
       }
       a {
         color: #fff;
-        font-size: 18px;
+        @include fluid(font-size, 12px, 18px);
         padding: 0 10px;
         text-align: center;
       }
@@ -660,22 +651,22 @@
         @include fluid(margin-right, 20px, 30px);
         img {
           @include fluid(margin-right, 5px, 10px);
-          width: 35px;
+          @include fluid(width, 32px, 35px);
         }
         p {
-          font-size: 24px;
+          @include fluid(font-size, 18px, 24px);
         }
       }
       &-btns {
         img {
-          width: 35px;
+          @include fluid(width, 30px, 50px);
         }
       }
     }
 
     &-link {
       color: #fff;
-      font-size: 30px;
+      @include fluid(font-size, 22px, 30px);
     }
   }
   &__bottom {
@@ -692,29 +683,30 @@
       @include fluid(margin-top, 10px, 20px);
       &-text {
         @include fluid(margin-left, 5px, 10px);
+        @include fluid(font-size, 14px, 18px);
         color: #0fdfa0;
-        font-size: 18px;
       }
     }
   }
   &__warning {
     color: #fff;
-    font-size: 12px;
+    @include fluid(font-size, 10px, 12px);
     line-height: 1.4;
   }
 }
 
 .gift {
-  width: 120px;
-  height: 170px;
+  @include fluid(width, 100px, 120px);
+  @include fluid(height, 130px, 200px);
+  @include fluid(padding, 7px, 9px);
   background-color: rgba(255, 195, 79, 0.88);
-  padding: 9px;
   border-radius: 15px;
   position: sticky;
   bottom: 25%;
   left: 90%;
   right: 10%;
   z-index: 33;
+  transition: 0.27s linear;
   &:hover {
     scale: 1.3;
   }
@@ -722,7 +714,8 @@
     width: 100%;
   }
   &-text {
-    font-size: 14px;
+    @include fluid(font-size, 12px, 14px);
+    text-align: center;
   }
 }
 
@@ -731,18 +724,18 @@
   @include fluid(margin-bottom, 40px, 80px);
 
   &__title {
-    font-size: 36px;
-    text-align: center;
+    @include fluid(font-size, 32px, 40px);
     @include fluid(margin-bottom, 20px, 40px);
+    text-align: center;
   }
   &__subtitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 8px;
-    margin: 0px 250px;
+    @include fluid(padding, 6px, 8px);
     @include fluid(padding-bottom, 5px, 10px);
+    margin: 0px 250px;
     position: relative;
     &:nth-child(2) {
       border-radius: 10px 10px 0 0;
@@ -760,7 +753,7 @@
     }
 
     &-text {
-      font-size: 18px;
+      @include fluid(font-size, 14px, 20px);
       font-weight: 300;
     }
     &-img {
@@ -788,6 +781,7 @@
     }
     &-text {
       padding: 20px 10px;
+      @include fluid(font-size, 12px, 22px);
     }
   }
   &__hidden,
@@ -800,8 +794,8 @@
 // Burger
 
 .burger {
-  height: 35px;
-  width: 50px;
+  @include fluid(height, 30px, 35px);
+  @include fluid(width, 40px, 50px);
   @include fluid(margin-top, 2px, 3px);
   display: flex;
   flex-direction: column;
@@ -823,7 +817,7 @@
   &-clicked {
     transition: ease-out 0.5s;
     &:nth-child(1) {
-      transform: rotate(45deg) translate(4px, 20px);
+      transform: rotate(45deg) translate(1px, 16px);
       transition: ease-out 0.5s;
     }
     &:nth-child(2) {
@@ -837,8 +831,7 @@
   }
   &__window {
     position: absolute;
-    top: 50px;
-    // left: 56%;
+    top: 54px;
     width: 20%;
     z-index: 999999999;
     background-color: #efeded;
@@ -886,7 +879,7 @@
 .contacts {
   &-title {
     text-align: center;
-    font-size: 40px;
+    @include fluid(font-size, 30px, 40px);
     @include fluid(margin-bottom, 30px, 60px);
     @include fluid(margin-top, 30px, 60px);
   }

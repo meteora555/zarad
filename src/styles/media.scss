@@ -4,7 +4,7 @@
   }
   .tabs {
     &__name {
-      width: 40%;
+      width: 50%;
     }
   }
   .burger {
@@ -24,6 +24,7 @@
     &__info {
       flex-wrap: wrap;
       &-text {
+        font-size: 28px;
         text-align: center;
       }
       &-phone {
@@ -53,12 +54,11 @@
       font-size: 19px;
     }
   }
-  .price {
-    flex-wrap: wrap;
-  }
+  .price,
   .promo {
     flex-wrap: wrap;
   }
+
   .info {
     flex-wrap: wrap;
     &__desc {
@@ -101,12 +101,22 @@
         font-size: 20px;
       }
       &__contacts {
+        margin-left: 30px;
         &-link {
           p {
             font-size: 16px;
           }
         }
       }
+    }
+  }
+  .question {
+    &__subtitle {
+      margin: 0 160px;
+      padding-top: 12px;
+    }
+    &__answer {
+      margin: 0 160px;
     }
   }
 }
@@ -123,7 +133,7 @@
       }
       &-phone {
         background-size: 60%;
-        background-position: 55px 10px;
+        background-position: 40px 10px;
       }
     }
   }
@@ -152,12 +162,21 @@
       width: 50%;
     }
     &__content__left-title {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
   .footer {
     &__link-row {
       flex-wrap: wrap;
+    }
+  }
+  .question {
+    &__subtitle {
+      margin: 0 50px;
+      padding-top: 12px;
+    }
+    &__answer {
+      margin: 0 50px;
     }
   }
 }

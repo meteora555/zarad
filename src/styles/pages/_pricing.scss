@@ -4,13 +4,13 @@
   @include fluid(padding, 10px, 20px);
   &-title {
     text-align: center;
-    font-size: 28px;
+    @include fluid(font-size, 22px, 28px);
     @include fluid(margin-bottom, 10px, 30px);
   }
   &-text {
     text-align: center;
     @include fluid(margin-bottom, 10px, 30px);
-    font-size: 22px;
+    @include fluid(font-size, 18px, 22px);
   }
   &__link {
     display: flex;

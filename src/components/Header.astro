@@ -3,8 +3,8 @@ import logo from '../images/logo.png';
 import contact from '../images/icons/ok.svg';
 ---
 
-<header>
-  <div class="container">
+<div class="container">
+  <header>
     <div class="header">
       <div class="header__logo">
         <a class="header__logo-link" href="/">
@@ -82,8 +82,8 @@ import contact from '../images/icons/ok.svg';
         </div>
       </nav>
     </div>
-  </div>
-</header>
+  </header>
+</div>
 <script>
   // Создаем функцию, для отслеживания клика по бургеру и анимация бургера, путем удаления и добавления классов
   function handlerClick() {
@@ -112,9 +112,7 @@ import contact from '../images/icons/ok.svg';
       menuContent = document.querySelector('.nav__link__content'),
       arrow = document.querySelector('.nav__link-img');
 
-    // question__subtitle-img-up
     menuBtn.addEventListener('click', () => {
-      console.log('123');
       menuContent.classList.toggle('visible');
       arrow.classList.toggle('question__subtitle-img-up');
     });
