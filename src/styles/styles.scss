@@ -843,4 +843,15 @@
 .visible {
   display: inherit;
 }
+.contacts {
+  &-title {
+    text-align: center;
+    font-size: 40px;
+    @include fluid(margin-bottom, 30px, 60px);
+    @include fluid(margin-top, 30px, 60px);
+  }
+  &-img {
+    width: 100%;
+  }
+}
 @import './media.scss';
