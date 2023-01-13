@@ -1,0 +1,89 @@
+<div class="tabs">
+  <h2 class="tabs-title">Для всех, кто в движении</h2>
+  <div class="tabs__name">
+    <button class="tabs__name-item tabs-active">Руководитель</button>
+    <button class="tabs__name-item">Курьер</button>
+    <button class="tabs__name-item">Менеджер</button>
+  </div>
+  <div class="tabs__content tabs-show">
+    <div class="tabs__content__left">
+      <h2 class="tabs__content__left-title">
+        «Пользуюсь несколько раз в месяц, когда внезапно сядет батарея. Не переживаю об этом и не
+        парюсь с зарядкой своего пауэрбанка, когда "Заряд тут!" есть буквально повсюду»
+      </h2>
+      <div class="tabs__content__left__person">
+        <img src="./images/founder.png" alt="person-img" class="tabs__content__left__person-img" />
+        <div class="tabs__content__left__person-desc">
+          <p class="tabs__content__left__person-name">Денис Теплов</p>
+          <p class="tabs__content__left__person-text">OOO «Иванов и ко»</p>
+        </div>
+      </div>
+    </div>
+    <div class="tabs__content__right">
+      <img src="./images/month-1.svg" alt="month" class="tabs__content__right-month" />
+      <div class="tabs__content__right-money">Средний расход: 282 ₽/мес</div>
+    </div>
+  </div>
+  <div class="tabs__content tabs-hidden">
+    <div class="tabs__content__left">
+      <h2 class="tabs__content__left-title">
+        «Беру на каждой смене, иногда по 2–3 раза. Отлично, что есть тариф для курьеров.
+        Администрация и сборщики тоже пользуются сервисом для работы»
+      </h2>
+      <div class="tabs__content__left__person">
+        <img src="./images/founder.png" alt="person-img" class="tabs__content__left__person-img" />
+        <div class="tabs__content__left__person-desc">
+          <p class="tabs__content__left__person-name">Артем</p>
+          <p class="tabs__content__left__person-text">Курьер Самоката</p>
+        </div>
+      </div>
+    </div>
+    <div class="tabs__content__right">
+      <img src="./images/month-3.svg" alt="month-2" class="tabs__content__right-month" />
+      <div class="tabs__content__right-money">Средний расход: 381 ₽/мес</div>
+    </div>
+  </div>
+  <div class="tabs__content tabs-hidden">
+    <div class="tabs__content__left">
+      <h2 class="tabs__content__left-title">
+        «Сервис прекрасно помогает работать без остановок и делать максимум из того, что
+        запланировал на день. Не нужно тратить время на подзарядку гаджета»
+      </h2>
+      <div class="tabs__content__left__person">
+        <img src="./images/founder.png" alt="person-img" class="tabs__content__left__person-img" />
+        <div class="tabs__content__left__person-desc">
+          <p class="tabs__content__left__person-name">Александр Сергеев</p>
+          <p class="tabs__content__left__person-text">менеджер по развитию</p>
+        </div>
+      </div>
+    </div>
+    <div class="tabs__content__right">
+      <img src="./images/month-1.svg" alt="month" class="tabs__content__right-month" />
+      <div class="tabs__content__right-money">Средний расход: 182 ₽/мес</div>
+    </div>
+  </div>
+</div>
+<script>
+  // получаем массив табов и массив блоков контента
+
+  const tabs = document.querySelectorAll('.tabs__name-item'),
+    content = document.querySelectorAll('.tabs__content');
+
+  //Запускаем цикл перебора наших вкладок и навешиваем событие клика
+
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', (event) => {
+      // удаляем активный класс c табов и скрываем контент
+
+      for (let t = 0; t < tabs.length; t++) {
+        tabs[t].classList.remove('tabs-active');
+        content[t].classList.add('tabs-hidden');
+        content[t].classList.remove('tabs-show');
+      }
+      //добавляем активный класс на таб и на определенный блок контента
+
+      tabs[i].classList.add('tabs-active');
+      content[i].classList.add('tabs-show');
+    });
+  }
+</script>

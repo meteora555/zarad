@@ -1,13 +1,17 @@
 ---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
 import Tabs from './little/Tabs.astro';
+import Question from './little/Question.astro';
 ---
 
+<Header />
 <div class="wrapper">
   <div class="container">
-    <div class="hero">
+    <div class="pricing">
       <div class="hero__content">
         <h2 class="hero__content-title">
-          Арендуй пауэрбанк по цене кофе.<br /> В нужное время в нужном месте
+          Пауэрбанк по цене пончика.<br /> Где и когда угодно
         </h2>
         <div class="hero__content-btn">
           <a class="btn__install">
@@ -23,17 +27,6 @@ import Tabs from './little/Tabs.astro';
         </div>
         <div class="hero__content-video">
           <img src="/images/video.png" alt="video-img" />
-        </div>
-      </div>
-      <div class="hero__info">
-        <div class="hero__info-text">
-          Не переживай, если батарея на исходе.<p>
-            Возьми пауэрбанк напрокат, пока совершаешь покупки или находишься на деловой встрече —
-            вокруг тысячи станций.
-          </p>
-        </div>
-        <div class="hero__info-aside">
-          <img class="hero__info-phone" src="./images/phone.jpg" alt="phone-img" />
         </div>
       </div>
       <div class="price">
@@ -60,17 +53,21 @@ import Tabs from './little/Tabs.astro';
           </div>
         </div>
       </div>
-    </div>
-    <div class="promo">
-      <img src="./images/promo_qr.png" alt="promo__qr-img" class="promo-qr" />
-      <div class="promo__mobile">
-        <img class="promo__mobile-phone" src="./images/phone.jpg" alt="phone-img" />
+      <Tabs />
+      <Question />
+      <div class="refer">
+        <h2 class="refer-title">Подари другу 100 ₽ на первую аренду</h2>
+        <p class="refer-text">Просто отправь ему ссылку ниже</p>
+        <div class="refer__link">
+          <div class="refer__link-copy">
+            <img src="./images/icons/copy.svg" alt="copy icon" />
+            <p>zaradtyt.page.link/8mCm</p>
+          </div>
+          <button class="refer__link-btn">Копировать ссылку</button>
+        </div>
       </div>
-      <div class="promo__info">
-        <img src="./images/set-icon.svg" alt="promo-img" class="promo__info-img" />
-        <h2 class="promo__info-text">Бери заряд и заряжайся по пути</h2>
-      </div>
     </div>
-    <Tabs />
   </div>
 </div>
+
+<Footer />

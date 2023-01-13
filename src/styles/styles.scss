@@ -3,6 +3,7 @@
 //pages
 @import './pages/_about.scss';
 @import './pages/_business.scss';
+@import './pages/_pricing.scss';
 
 .container {
   max-width: 1140px;
@@ -119,6 +120,7 @@
       margin: 0 auto;
       @include fluid(margin-top, 40px, 80px);
       max-width: 1100px;
+      @include fluid(margin-bottom, 30px, 60px);
       img {
         border-radius: 20px;
         width: 100%;
@@ -193,6 +195,7 @@
   background-color: rgb(216, 213, 213);
   padding: 35px;
   border-radius: 30px;
+  @include fluid(margin-bottom, 40px, 70px);
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);

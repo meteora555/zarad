@@ -1,0 +1,35 @@
+.refer {
+  background-color: #fff;
+  border-radius: 20px;
+  @include fluid(padding, 10px, 20px);
+  &-title {
+    text-align: center;
+    font-size: 28px;
+    @include fluid(margin-bottom, 10px, 30px);
+  }
+  &-text {
+    text-align: center;
+    @include fluid(margin-bottom, 10px, 30px);
+    font-size: 22px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    &-copy {
+      display: flex;
+      border: 1px solid #9ebee0;
+      @include fluid(padding, 4px, 8px);
+      border-radius: 20px;
+      img {
+        @include fluid(margin-right, 5px, 10px);
+      }
+    }
+    &-btn {
+      @include fluid(margin-left, 5px, 10px);
+      @include fluid(padding, 4px, 10px);
+      border-radius: 20px;
+      color: #fff;
+      background-color: black;
+    }
+  }
+}

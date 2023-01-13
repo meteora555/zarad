@@ -1,0 +1,85 @@
+<div class="question">
+  <h2 class="question__title">Ответы на вопросы</h2>
+  <div class="question__subtitle">
+    <p class="question__subtitle-text">Сколько это стоит</p>
+    <img src="./images/icons/arrow-blue.svg" alt="arrow" class="question__subtitle-img" />
+  </div>
+  <div class="question__answer question__hidden">
+    <div class="question__answer-text">
+      Везде по-разному. Средняя стоимость — примерно 100 ₽ в сутки. Чтобы узнать действующий тариф,
+      выбери зарядную станцию в приложении.
+    </div>
+  </div>
+  <div class="question__subtitle">
+    <p class="question__subtitle-text">Как пользоваться?</p>
+    <img
+      src="./images/icons/arrow-blue.svg"
+      alt="arrow"
+      class="question__subtitle-img arrow-down arrow-up"
+    />
+  </div>
+  <div class="question__answer question__hidden">
+    <div class="question__answer-text">
+      <ul class="question__answer-list">
+        <li class="question__answer-item">
+          Скачай приложение «Заряд тут!» в App Store, Google Play или HUAWEI AppGallery.
+        </li>
+        <li class="question__answer-item">Создай учётную запись — нужен твой номер телефона.</li>
+        <li class="question__answer-item" class="question__answer-item">
+          Выбери удобную станцию на карте. Мы поможем зарядить телефон в торговом центре, в
+          аэропорту, на вокзале и еще в тысячах мест по всему городу.
+        </li>
+        <li class="question__answer-item">
+          Когда будешь на месте, ищи автомат с надписью «Заряд тут!»
+        </li>
+        <li class="question__answer-item">Следуй инструкциям на автомате.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="question__subtitle">
+    <p class="question__subtitle-text">Где найти зарядные станции?</p>
+    <img
+      src="./images/icons/arrow-blue.svg"
+      alt="arrow"
+      class="question__subtitle-img arrow-down arrow-up"
+    />
+  </div>
+
+  <div class="question__answer question__hidden">
+    <div class="question__answer-text">
+      В разделе «Карта станции» Станции могут быть в наших цветах — сине-жёлтые. А могут быть
+      оформлены в цветах бренда нашего партнёра.
+    </div>
+  </div>
+
+  <div class="question__subtitle">
+    <p class="question__subtitle-text">Насколько пауэрбанк безопасен?</p>
+    <img
+      src="./images/icons/arrow-blue.svg"
+      alt="arrow"
+      class="question__subtitle-img arrow-down arrow-up"
+    />
+  </div>
+  <div class="question__answer question__hidden">
+    <div class="question__answer-text">
+      Полностью безопасен — как обычная зарядка. Наши пауэрбанки производят с соблюдением всех
+      международных норм, сертификацией Apple и стран ЕАС.
+    </div>
+  </div>
+</div>
+<script>
+  // получаем массив вопросов и ответов блоков контента
+
+  const question = document.querySelectorAll('.question__subtitle'),
+    answer = document.querySelectorAll('.question__answer'),
+    arrow = document.querySelectorAll('.question__subtitle-img');
+
+  //Запускаем цикл и тоглим класс
+
+  for (let i = 0; i < question.length; i++) {
+    question[i].addEventListener('click', () => {
+      answer[i].classList.toggle('question__hidden');
+      arrow[i].classList.toggle('question__subtitle-img-up');
+    });
+  }
+</script>

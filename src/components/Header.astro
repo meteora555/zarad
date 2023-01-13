@@ -3,36 +3,11 @@ import logo from '../images/logo.png';
 import contact from '../images/icons/ok.svg';
 ---
 
-<script>
-  // Создаем функцию, для отслеживания клика по бургеру и анимация бургера, путем удаления и добавления классов
-  function handleClick() {
-    const burgerBtn = document.querySelector('.burger'),
-      burgerBar = document.querySelectorAll('.burger__bar'),
-      burgerWindow = document.querySelector('.burger__window'),
-      burgerWrapper = document.querySelector('.wrapper');
-    burgerBtn.addEventListener('click', () => {
-      burgerBar.forEach((item) => {
-        if (item.classList[1] === 'burger-unclick') {
-          item.classList.remove('burger-unclick');
-          item.classList.add('burger-clicked');
-          burgerWindow.classList.remove('hidden');
-          burgerWrapper.classList.add('wrapper_blur');
-        } else {
-          item.classList.add('burger-unclick');
-          item.classList.remove('burger-clicked');
-          burgerWindow.classList.add('hidden');
-          burgerWrapper.classList.remove('wrapper_blur');
-        }
-      });
-    });
-  }
-  handleClick();
-</script>
 <header>
   <div class="container">
     <div class="header">
       <div class="header__logo">
-        <a class="header__logo-link" href="">
+        <a class="header__logo-link" href="/">
           <img class="header__logo-img" src={logo} alt="logo-img" />
           <h2 class="header__logo-title">Заряд тут!</h2>
           <p class="header__logo-text">пауэрбанк станции</p>
@@ -41,16 +16,16 @@ import contact from '../images/icons/ok.svg';
       <nav class="nav">
         <ul class="nav__items">
           <li class="nav__item">
-            <a class="nav__link" href="#">Для бизнеса</a>
+            <a class="nav__link" href="/business">Для бизнеса</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Тарифы</a>
+            <a class="nav__link" href="/pricing">Тарифы</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">О нас</a>
+            <a class="nav__link" href="/about">О нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Карта станций</a>
+            <a class="nav__link" href="/map">Карта станций</a>
           </li>
         </ul>
         <div class="nav__contacts">
@@ -94,3 +69,28 @@ import contact from '../images/icons/ok.svg';
     </div>
   </div>
 </header>
+<script>
+  // Создаем функцию, для отслеживания клика по бургеру и анимация бургера, путем удаления и добавления классов
+  function handleClick() {
+    const burgerBtn = document.querySelector('.burger'),
+      burgerBar = document.querySelectorAll('.burger__bar'),
+      burgerWindow = document.querySelector('.burger__window'),
+      burgerWrapper = document.querySelector('.wrapper');
+    burgerBtn.addEventListener('click', () => {
+      burgerBar.forEach((item) => {
+        if (item.classList[1] === 'burger-unclick') {
+          item.classList.remove('burger-unclick');
+          item.classList.add('burger-clicked');
+          burgerWindow.classList.remove('hidden');
+          burgerWrapper.classList.add('wrapper_blur');
+        } else {
+          item.classList.add('burger-unclick');
+          item.classList.remove('burger-clicked');
+          burgerWindow.classList.add('hidden');
+          burgerWrapper.classList.remove('wrapper_blur');
+        }
+      });
+    });
+  }
+  handleClick();
+</script>
