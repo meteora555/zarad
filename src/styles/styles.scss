@@ -1,7 +1,7 @@
 @import './global.scss';
 
 //pages
-@import './pages/_about.scss';
+// @import './pages/_about.scss';
 @import './pages/_business.scss';
 @import './pages/_pricing.scss';
 
@@ -12,8 +12,6 @@
 .wrapper_blur {
   filter: blur(10px);
 }
-
-//header
 
 .header {
   @include fluid(padding, 15px, 10px);
@@ -52,6 +50,7 @@
   &__item {
     display: flex;
     align-items: center;
+    @include fluid(margin-right, 8px, 12px);
   }
   &__link {
     color: black;
@@ -59,11 +58,15 @@
     @include fluid(font-size, 14px, 18px);
     font-weight: 600;
     transition: 0.2s linear;
+
     &-btn {
-      position: relative;
       display: inline-block;
       background: none;
       font-weight: 400;
+      &-underline {
+        position: relative;
+        border-bottom: 2px solid #9ebee0;
+      }
     }
     &-img {
       @include fluid(width, 10px, 18px);
@@ -72,7 +75,7 @@
     &__content {
       display: none;
       position: absolute;
-      top: 50px;
+      top: 53px;
       background-color: #f1f1f1;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -97,7 +100,7 @@
     display: flex;
     align-items: center;
     @include fluid(padding, 8px, 10px);
-    @include fluid(margin-left, 30px, 80px);
+    @include fluid(margin-left, 50px, 90px);
     transition: 0.2s linear;
     cursor: pointer;
     &-img {
@@ -114,8 +117,6 @@
     }
   }
 }
-
-//hero
 
 .hero {
   &__content {
@@ -231,7 +232,7 @@
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   &__left {
     @include fluid(padding, 20px, 30px);
-    width: 70%;
+    width: 60%;
     &-img {
       width: 10%;
       @include fluid(margin-bottom, 14px, 20px);
@@ -371,8 +372,6 @@
   }
 }
 
-// main
-
 .info {
   margin: 0 auto;
   padding: 0 20px;
@@ -423,6 +422,7 @@
     &-btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       @include fluid(padding, 14px, 20px);
       border-radius: 50px;
       background-color: black;
@@ -492,10 +492,12 @@
       @include fluid(margin-top, 20px, 25px);
       background-color: #9ebee0;
       border-radius: 30px;
-      p {
+      cursor: pointer;
+      a {
         @include fluid(font-size, 12px, 14px);
         font-weight: 200;
         padding: 2px 15px;
+        color: black;
       }
     }
   }
@@ -537,7 +539,6 @@
   }
 }
 
-//footer
 .container-footer {
   max-width: 1480px;
   margin: 0 auto;
@@ -729,6 +730,7 @@
     text-align: center;
   }
   &__subtitle {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -790,8 +792,6 @@
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   }
 }
-
-// Burger
 
 .burger {
   @include fluid(height, 30px, 35px);

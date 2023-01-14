@@ -17,7 +17,7 @@ import contact from '../images/icons/ok.svg';
         <ul class="nav__items">
           <li class="nav__item">
             <button class="nav__link nav__link-btn">Для бизнеса</button>
-            <img src="./images/icons/arrow-blue.svg" alt="" class="nav__link-img" />
+            <!-- <img src="./images/icons/arrow-blue.svg" alt="" class="nav__link-img" /> -->
             <div class="nav__link__content">
               <a class="nav__link__content-business" href="/business">
                 <h5>Разместить у себя</h5>
@@ -39,9 +39,9 @@ import contact from '../images/icons/ok.svg';
           <li class="nav__item">
             <a class="nav__link" href="/about">О нас</a>
           </li>
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <a class="nav__link" href="/map">Карта станций</a>
-          </li>
+          </li> -->
         </ul>
         <div class="nav__contacts">
           <a href="/contacts">
@@ -57,17 +57,17 @@ import contact from '../images/icons/ok.svg';
         <div class="burger__window hidden">
           <ul class="burger__window-list">
             <li class="burger__window-item">
-              <a href="#" class="burger__window-link">Для бизнеса</a>
+              <a href="/business" class="burger__window-link">Для бизнеса</a>
             </li>
             <li class="burger__window-item">
-              <a href="#" class="burger__window-link">Тарифы</a>
+              <a href="/pricing" class="burger__window-link">Тарифы</a>
             </li>
             <li class="burger__window-item">
-              <a href="#" class="burger__window-link">О нас</a>
+              <a href="/about" class="burger__window-link">О нас</a>
             </li>
-            <li class="burger__window-item">
+            <!-- <li class="burger__window-item">
               <a href="#" class="burger__window-link">Карта станций</a>
-            </li>
+            </li> -->
             <li class="burger__window-item">
               <a href="#" class="burger__window-link">Контакты и поддержка</a>
             </li>
@@ -114,7 +114,7 @@ import contact from '../images/icons/ok.svg';
 
     menuBtn.addEventListener('click', () => {
       menuContent.classList.toggle('visible');
-      arrow.classList.toggle('question__subtitle-img-up');
+      menuBtn.classList.toggle('nav__link-btn-underline');
     });
   }
   handlerClick();

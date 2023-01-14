@@ -121,6 +121,14 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .nav {
+    &__contacts {
+      margin-left: 0px;
+    }
+  }
+  .container {
+    max-width: 100%;
+  }
   .hero {
     &__info {
       justify-content: center;
@@ -183,6 +191,19 @@
 @media screen and (max-width: 576px) {
   .nav__contacts {
     display: none;
+  }
+  .burger {
+    &__window {
+      position: absolute;
+      top: 54px;
+      right: 0;
+      width: 80%;
+      z-index: 999999999;
+      background-color: #efeded;
+      border: 1px solid #9ebee0;
+      padding: 15px;
+      border-radius: 20px;
+    }
   }
 
   .hero {
