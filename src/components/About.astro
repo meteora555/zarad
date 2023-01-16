@@ -4,7 +4,6 @@ import Footer from './Footer.astro';
 ---
   <Header />
   <div class="wrapper">
-
     <div class="about">
       <div class="main">
         <h1 class="main__title">
@@ -46,10 +45,10 @@ import Footer from './Footer.astro';
         </p>
       </div>
       <div class="statistics">
-        <img src="/images/about/statistics1.jpg" alt="Пауэрбанк в кафе" />
-        <img src="/images/about/statistics3.jpg" alt="Автомат с пауэрбанками" />
-        <img src="/images/about/statistics2.png" alt="Пауэрбанк и телефон" />
-        <div>
+        <img class="statistics__img-1" src="/images/about/statistics1.jpg" alt="Пауэрбанк в кафе" />
+        <img class="statistics__img-3"src="/images/about/statistics3.jpg" alt="Автомат с пауэрбанками" />
+        <img class="statistics__img-2"src="/images/about/statistics2.png" alt="Пауэрбанк и телефон" />
+        <div class="statistics__row" >
           <div class="statistics__card card">
             <div>
               <p class="statistics__card__number">130 тыс.</p>
@@ -365,8 +364,5 @@ import Footer from './Footer.astro';
         });
       </script>
     </div>
-
   </div>
-
-
 <Footer />
