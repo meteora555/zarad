@@ -1,5 +1,5 @@
 ---
-import logo from '../images/logo.png';
+
 import contact from '../images/icons/ok.svg';
 ---
 
@@ -8,7 +8,10 @@ import contact from '../images/icons/ok.svg';
     <div class="header">
       <div class="header__logo">
         <a class="header__logo-link" href="/">
-          <img class="header__logo-img" src={logo} alt="logo-img" />
+          <img class="header__logo-img" src="/assets/logo.png" alt="logo-img" />
+          <!-- <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"
+            fill="rgb(0, 183, 255)" stroke="#000" stroke-width="20" stroke="yellow"/></svg> -->
           <h2 class="header__logo-title">Заряд тут!</h2>
           <p class="header__logo-text">пауэрбанк станции</p>
         </a>
@@ -47,7 +50,7 @@ import contact from '../images/icons/ok.svg';
           <a href="/contacts">
             <div class="nav__contacts-text">Контакты и поддержка</div>
           </a>
-          <img src={contact} alt="contacts-img" class="nav__contacts-img" />
+          <img src="/assets/icons/ok.svg" alt="contacts-img" class="nav__contacts-img" />
         </div>
         <div class="burger">
           <div class="burger__bar burger-unclick"></div>
@@ -69,14 +72,14 @@ import contact from '../images/icons/ok.svg';
               <a href="#" class="burger__window-link">Карта станций</a>
             </li> -->
             <li class="burger__window-item">
-              <a href="#" class="burger__window-link">Контакты и поддержка</a>
+              <a href="/contacts" class="burger__window-link">Контакты и поддержка</a>
             </li>
             <li class="burger__window-item">
               <a href="#" class="burger__window-link">Установить приложение</a>
             </li>
           </ul>
           <div class="burger__window-tel">
-            <img src={contact} alt="tel-icon" />
+            <img src="/assets/icons/ok.svg" alt="tel-icon" />
             8 800 123 45 67
           </div>
         </div>

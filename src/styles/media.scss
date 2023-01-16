@@ -342,4 +342,23 @@
       align-items: center;
     }
   }
+  .footer {
+    &__link-row {
+      flex-wrap: wrap;
+      flex-direction: column;
+      display: flex;
+      align-items: start;
+    }
+    &__info {
+      &__contacts {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
 }
